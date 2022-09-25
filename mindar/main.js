@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const {renderer, scene, camera} = mindarThree;
 
 	// Create a 3D yellow cube
-	const geometry = new THREE.BoxGeometry(0.5, 0.5);
+	const geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
 	const material = new THREE.MeshBasicMaterial({color: 0xFFFF00});
 	const cube = new THREE.Mesh(geometry, material);
+	cube.position.set(0, 0, 0.3);
 
 	// Create a MindArThree image anchor 
 	const anchor = mindarThree.addAnchor(0);
